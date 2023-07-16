@@ -3,8 +3,8 @@
 
 # dataBase = mysql.connector.connect(
 #     host='localhost',
-#     user='root',
-#     passwd='root'
+#     user='***',
+#     passwd='**'
 
 # )
 # cursorObject = dataBase.cursor()
