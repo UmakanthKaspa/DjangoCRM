@@ -4,8 +4,8 @@
 Welcome to **My First Django Project: Lead Management Playground**! 🚀 This project is a small and tiny playground I've built to explore and learn Django.
 
 ## Notable Features ✨
-- **User Registration and Login**: Create your account and get ready for a personalized experience. It's like having your own secret portal to the Django world! 🚪🔐
-- **Lead Management**: Easily add, view, update, and delete lead records with just a few clicks. Managing leads has never been more fun and efficient! 💼✍️
+- **User Registration and Login**: New users can easily create an account and Existing users can securely log in to their accounts! 🚪🔐
+- **Lead Management**: Easily add, view, update, and delete lead records with just a few clicks. 💼✍️
 
 ## Technologies and Tools Utilized 💻
 To bring this project to life, I've utilized an incredible lineup of technologies and tools:
