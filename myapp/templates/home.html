@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  {% if user.is_authenticated %}
+    {% if records %}
+    <br>
+      <div class="card">
+        <div class="card-header">
+          <h5 class="mb-0">Lead Records</h5>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered table-sm table-hover">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for record in records %}
+                  <tr>
+                    <td>{{ record.first_name }} {{ record.last_name }}</td>
+                    <td>{{ record.email }}</td>
+                    <td>{{ record.phone }}</td>
+                    <td>
+                      <div class="btn-group" role="group">
+                        <a href="{% url 'record' record.id %}" class="btn btn-secondary btn-sm" title="View Record">
+                          <i class="bi bi-eye"></i>
+                        </a>
+                        <a href="{% url 'update_record' record.id %}" class="btn btn-primary btn-sm" title="Update Record" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover" data-bs-delay="200" data-bs-container="body" data-bs-html="true" data-bs-title="Update Lead">
+                          <i class="bi bi-pencil"></i>
+                        </a>
+                        <a href="{% url 'delete_record' record.id %}" class="btn btn-danger btn-sm" title="Delete Record" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover" data-bs-delay="200" data-bs-container="body" data-bs-html="true" data-bs-title="Delete Lead">
+                          <i class="bi bi-trash"></i>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% else %}
+    <div class="col-md-6 offset-md-3">
+      <h1 class="mb-4 text-center">Login</h1>
+      <form method="POST" action="{% url 'home' %}" class="needs-validation" novalidate>
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+          <div class="invalid-feedback">
+            Please enter your username.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+          <div class="invalid-feedback">
+            Please enter your password.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+  // Initialize Bootstrap tooltips
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+{% endblock %}
