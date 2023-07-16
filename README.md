@@ -10,10 +10,9 @@ Welcome to **My First Django Project: Lead Management Playground**! 🚀 This pr
 ## Technologies and Tools Utilized 💻
 To bring this project to life, I've utilized an incredible lineup of technologies and tools:
 
-- **Django**: The superheroic web framework that forms the sturdy backbone of this project. It will make your development process a breeze! 💪🕸️
-- **HTML, CSS, and Bootstrap**: These mighty trio powers have been harnessed to create stunning and responsive user interfaces. Get ready for some eye candy! 🎨🌟
+- **Django**: The superheroic web framework that forms the sturdy backbone of this project. 💪🕸️
+- **HTML, CSS, and Bootstrap**: The dynamic trio of HTML, CSS, and Bootstrap were the driving forces behind the front-end development of this project 🎨🌟
 - **MySQL**: The database management system used to store and manage your data efficiently. Say hello to seamless data management! 💾🗄️
-- **Git and GitHub**: With the power of version control and collaboration at your fingertips, you can fearlessly experiment and work with others. Let the code sharing begin! 🤝🚀
 
 ## Getting Started 🌟
 
